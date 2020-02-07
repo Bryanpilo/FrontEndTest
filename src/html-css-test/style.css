@@ -90,6 +90,27 @@
     margin-bottom: 10px;
     text-align: center;
     overflow: hidden;
+    color: black;
+}
+
+.container-card:hover > p {
+    color: black;
+}
+
+.container-card:active > p {
+    color: black;
+}
+
+.Container > a {
+    text-decoration: none;
+}
+
+.Container:active > a {
+    text-decoration: none;
+}
+
+.Container:hover > a {
+    text-decoration: none;
 }
 
 
