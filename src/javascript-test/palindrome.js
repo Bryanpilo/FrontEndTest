@@ -2,10 +2,10 @@
 
 const isPalindrome = (palindrome) => {
 
-    if(typeof palindrome === 'string'){
+    if(typeof palindrome !== 'string'){
         var obj = {
             date:  new Date(),
-            message: "Type of says that it's a diffent kind of type",
+            message: "Type of says that it's a diffent kind of type ",
           };
         
         return obj;
