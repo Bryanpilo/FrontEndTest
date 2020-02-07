@@ -1,4 +1,5 @@
-var palindrome= require('./palindrome');
+const palindrome= require('./palindrome');
+const assert = require('chai').assert;
 
 console.log(palindrome.isPalindrome("oso"))
 console.log(palindrome.isPalindrome("reconocer"))
