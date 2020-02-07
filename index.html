@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFA Front End Developer Test</title>
+    <style>
+        html{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: auto;
+            padding: 0 1.33em;
+            max-width: 58em;
+            line-height: 1.25;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        h1,h2,h3,h4,h5{
+            font-family: serif;
+            margin: 1.33em 0 .66em 0;
+        }
+
+        li {
+            margin-bottom: .66em;
+        }
+
+        img{
+            max-width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .image-section{
+            overflow: visible;
+            background-color: black;
+            padding: 3em;
+            text-align: center;
+        }
+
+        .image-section img{
+            display: inline-block;
+        }
+
+        .inline-image{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>TFA Front End Developer Test</h1>
+    <p>
+        Please clone
+        <a href="https://github.com/teach-for-america/front-end-dev-test">
+            https://github.com/teach-for-america/front-end-dev-test</a> and do your work there.  We're
+        interested to see your commits too!  <strong>In the interest of keeping your work private between you and us,
+        please make your cloned repo private</strong>, (in github's settings) and invite 
+        <a href="https://github.com/robliota-tfa">robliota-tfa</a> to be a collaborator.
+    </p>
+    <h2>JavaScript/NodeJS</h2>
+    <p>
+        For this test, you'll write two functions exposed as methods of a node module.
+    </p>
+    <p>
+        The first method (isPalindrome) should validate whether or not a given string is a <a href="https://en.wikipedia.org/wiki/Palindrome">palindrome</a>.
+        (assume ascii text and numbers, but the code should ignore non alphanumeric characters, as in evaluating sentences
+        which may contain punctuation spaces and capitalization).
+    </p>
+    <p>
+        The second method (randomAsyncStringIsPalindrome) will return whether or not a random unknown string 
+        (from an asynchronous service) is a palindrome.
+    </p>
+    <h3>isPalindrome</h3>
+    <p>
+        This method should take a string as an argument. That method should:
+    </p>
+    <ul>
+        <li>
+            Return <strong>true</strong> when that String <strong>is</strong> a palindrome
+        </li>
+        <li>
+            Return <strong>false</strong> when that String is <strong>not</strong> a palindrome
+        </li>
+        <li>
+            Return <strong>false</strong> when that String is empty
+        </li>
+        <li>
+            When passed a parameter that is not a String, throw an Error, or an object that is an instance of one,
+            with a descriptive message about what went wrong
+        </li>
+    </ul>
+    <h3>randomAsyncStringIsPalindrome</h3>
+    <p>
+        This method should take an Object as an argument 
+        (you do not have to implement this Object - its documentation is below: MysteryStringObjectGetter), 
+        and using the interface it exposes fetch a string and return a Promise that will resolve 
+        either true or false, indicating whether or not the fetched result is a palindrome.
+    </p>
+    <h3>Documentation for MysteryStringObjectGetter</h3>
+    <ul>
+        <li>
+            get() <br/>
+            makes an asynchronous http request and returns a Promise that will resolve to a String if the request is successful.
+        </li>
+    </ul>
+    <p><strong>Please show your work - your unit tests are <em>very</em> appreciated!</strong></p>
+    <h2>HTML/CSS</h2>
+    <p>
+        For this test, using only custom HTML and CSS3 (assume full standard compliance - don't worry about shims) implement this
+        page with attention to responsive design:
+    </p>
+    <h3>Mobile</h3>
+    <div class="image-section">
+        <img src="docs/img/mobile-screen.png">
+    </div>
+    <h3>Desktop</h3>
+    <div class="image-section">
+        <img src="docs/img/desktop.png">
+    </div>
+    <ul>
+        <li>
+            The headings should be in Merriweather (Light), and all other text should be Roboto. (These are open source approximations
+            of our on-brand fonts available through Google's Fonts API).  Headings that are not white should be #013745.
+        </li>
+        <li>
+            The top banner background color is #00303c.
+        </li>
+        <li>
+            For the top nav, links should have a #f74b59 underline when focused and hovered.
+            ( <img class="inline-image" src="docs/img/active-nav-item.png"> )
+        </li>
+        <li>
+            <img style="float: right;" title="active menu card hover state" src="docs/img/active-menu-card.png">
+            For the menu cards, The space between the heading and the description should have a #ffad00 separator when
+            focused and hovered. The separator should be animated into view (spreading outward from 0px wide to roughly the width 
+            displayed in the image to the right). The hover state should apply whenever any part of the card is hovered over.
+        </li>
+        <li>
+            Menu cards should be links, and they should all dynamically adjust to fit the height of the 
+            element with the most content. (All card tops and bottoms should always be flush.)
+        </li>
+        <li>
+            Links should use Fragment Identifiers to mock out paging functionality.  
+            (Clicking on the "My Classrooms" link should change the url fragment.)
+        </li>
+        <li>
+            The page should be navigable by keyboard.
+        </li>
+        <li>
+            This portion of the test should not require any JavaScript.
+        </li>
+    </ul>
+</body>
+</html>
