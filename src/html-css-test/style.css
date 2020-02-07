@@ -73,15 +73,15 @@
 
 .container-card > hr {
     height: 0px;
-    width: 20%;
-    margin-left:40%;
+    width: 60%;
+    margin-left:20%;
     border: 0;
     background-color: #ffad00;
 }
 .container-card:hover > hr {
     height:3px;
-    margin-left:40%;
-    transition: height 1s ease-out; /* For Safari 3.1 to 6.0 */
+    margin-left:20%;
+    transition: height 1s ease-out;
     transition: height 1s  ease-out;
 }
 
@@ -89,11 +89,16 @@
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
+    overflow: hidden;
 }
 
 
 /*configuration of tablets*/
 @media only screen and (min-width: 768px) {
+    .card {
+        margin-top: 40px !important;
+    }
+
     /*header navs*/
     .topnav{
         overflow: unset;
@@ -107,10 +112,31 @@
     .topnav-right a {
       margin-top: 15px;
     }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        margin: 10px;
+        height: 25%;
+        width: 30%;
+        float: left;
+    }
+
+    .container-card > hr {
+        margin-left:30%;
+        width: 40%
+    }
+    .container-card:hover > hr {
+        margin-left:30%;
+    }
 }
 
 /*configuration of computers*/
 @media only screen and (min-width: 1000px) {
+    .card {
+        margin-top: 40px !important;
+    }
+
     /*header navs*/
     .topnav{
         overflow: unset;
@@ -124,5 +150,21 @@
     .topnav-right a {
         margin-top: 15px;
       }
-
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        margin: 10px;
+        width: 30%;
+        height: 20%;
+        float: left;
+    }
+      
+    .container-card > hr {
+        margin-left:30%;
+        width: 40%
+    }
+    .container-card:hover > hr {
+        margin-left:30%;
+    }
 }
